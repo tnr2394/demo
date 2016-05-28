@@ -1,8 +1,52 @@
 <html>
 <head>
 	<title>My New Git Repo</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/style/w3.css">
+	<link rel="stylesheet" href="assets/style/style.css">
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+	<script src = "assets/scripts/app.module.js"></script>
+	<script src = "assets/scripts/app.config.js"></script>
+
+	<script src="guest/model/guest.factory.js"></script>
+	<script src="guest/controller/guest.about.controller.js"></script>
+	<script src="guest/controller/guest.welcome.controller.js"></script>
+	<script src="guest/controller/guest.contact.controller.js"></script>
+	
+
+
 </head>
-<body>
-	<h1> MY DEVELOP BRANCH </h1>
+<body ng-app="demoApp" class="w3-blue">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 well-sm w3-dark-grey">
+				<h2> My Demo Application In AngularJs </h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<ul class="list-inline nav nav-bar nav-pills">
+					<li><a class="w3-btn w3-grey" ui-sref="welcome"> Home </a></li>
+					<li><a class="w3-btn w3-grey" ui-sref="about"> About </a></li>
+					<li><a class="w3-btn w3-grey" ui-sref="contact"> Contact Us </a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div ui-view class=" well-sm">
+
+				</div>
+			</div>
+		</div>
+		<footer class="row footer">
+			<div class="col-md-12 bg-primary well-sm">
+				This is my footer
+			</div>
+		</footer>
+	</div>
 </body>
 </html>

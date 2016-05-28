@@ -1,0 +1,17 @@
+html,body{
+    height: 100%
+}
+.footer{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.specialHover:hover > h5{
+	color:#fff;
+}
+
+.specialHover:hover > div{
+	text-shadow:0 0 2px white;
+}
