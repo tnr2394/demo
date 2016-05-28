@@ -1,0 +1,10 @@
+
+1.Firstname, MiddleName, LastName
+2.University
+3.College
+4.Course
+5.Semester
+6.City
+7.District
+8.Emailid
+9.Phone No.
