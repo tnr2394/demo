@@ -1,36 +1,24 @@
 <div class="container-fluid">
 	<h2> Registration Form</h2>
 
-	<form class="form-horizontal" role="form" class="w3-blue">
-		<div class="col-sm-4">
-			<input type="text" id="frst" placeholder="Enter first name">
-		</div>
+	<form  role="form" class="w3-blue" ng-init="x={}" ng-submit="doAddStudent(x)">
+		<div class="form-inline well" >
+			<input class="form-control" type="text"  id="frst" ng-model="x['fname']" placeholder="Enter first name">
 
-		<div class="col-sm-4">
-			<input type="text"  id="mid" placeholder="Enter Middle name">
-		</div>
+			<input class="form-control" type="text"  id="mid" ng-model="x['mname']" placeholder="Enter Middle name">
 
-		<div class="col-sm-4">
-			<input type="text"  id="lst" placeholder="Enter last name">
+			<input class="form-control" type="text"  id="lst" ng-model="x['lname']" placeholder="Enter last name">
 		</div>
-
-		<div class="col-sm-12">
-			<select class="">
+			<select class="form-control"  ng-model="x['gender']">
 				<option value='male'> Male </option>
 				<option value='female'> Female </option>
 			</select>
-		</div>
-
-		<div class="col-sm-12">
-			<input type="text"  id="uni" placeholder="Enter your university">
-		</div>
-
-		<div class="col-sm-12">
-			<input type="text"  id="clg" placeholder="Enter your college">
-		</div>
-
-		<div class="col-sm-12">
-			<select >
+	
+			<input class="form-control" type="text"  id="uni" ng-model="x['university']" placeholder="Enter your university">
+	
+			<input class="form-control" type="text"  id="clg" ng-model="x['college']" placeholder="Enter your college">
+	
+			<select class="form-control" ng-model="x['course']">
 				<option value='bba'> B.B.A. </option>
 				<option value='bsc'> B.SC </option>
 				<option value='bcom'> B.Com. </option>
@@ -39,10 +27,7 @@
 				<option value='bca'> B.C.A. </option>
 			</select>
 
-		</div>
-
-		<div class="col-sm-12">
-			<select >
+			<select class="form-control" ng-model="x['semester']">
 				<option> 1 </option>
 				<option> 2 </option>
 				<option> 3 </option>
@@ -51,24 +36,14 @@
 				<option> 6 </option>
 			</select>
 
-		</div>
+			<input class="form-control" type="text"  id="city" ng-model="x['city']" placeholder="Enter your city">
+	
+			<input class="form-control" type="text"  id="dist" ng-model="x['district']" placeholder="Enter your district">
 
-		<div class="col-sm-12">
-			<input type="text"  id="city" placeholder="Enter your city">
-		</div>
+			<input class="form-control" type="email"  id="email" ng-model="x['email']" placeholder="Enter your E-mail id">
 
-		<div class="col-sm-12">
-			<input type="text"  id="dist" placeholder="Enter your district">
-		</div>
+			<input class="form-control" type="number"  id="phone" ng-model="x['phone']" placeholder="Enter your phone no.">
 
-		<div class="col-sm-12">
-			<input type="email"  id="email" placeholder="Enter your E-mail id">
-		</div>
-
-		<div class="col-sm-12">
-			<input type="number"  id="phone" placeholder="Enter your phone no.">
-		</div>
-
-		
+		<button class="btn btn-success" type="submit">Add Student</button>
 	</form>
 </div>

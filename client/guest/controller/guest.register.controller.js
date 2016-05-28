@@ -1,9 +1,8 @@
-angular.module('demoApp' .
-	controller('registerCtrl', ['$scope','$state','$guestFactory',function($scope,$state,guestFactory){
+angular.module('demoApp').
+	controller('registerCtrl', ['$scope','$state','guestFactory',function($scope,$state,guestFactory){
 		
-		activate();
-		function activate(){
-			guestFactory.registerForm()
+		$scope.doAddStudent=function(x){
+			guestFactory.addStudent(x)
 			.then(function(response){
 				$scope.reg=response.data;	
 			},function(err){
