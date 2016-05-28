@@ -12,7 +12,13 @@ angular.module('demoApp')
 			.then(res,err);
 			return defer.promise;
 		}
-	
+		obj.getAllPostHolders = function(){
+
+			$http.get("http://www.vvprotaract.club/server/guest/get_postholders.php")
+			.then(res,err);
+			return defer.promise;
+		}
+			
 		obj.getAllTestimonials = function(){
 
 			$http.get("http://www.vvprotaract.club/server/guest/get_events.php")

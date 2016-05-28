@@ -15,3 +15,8 @@ html,body{
 .specialHover:hover > div{
 	text-shadow:0 0 2px white;
 }
+img{
+    max-width: 300px;
+    max-width: 300px
+    
+}

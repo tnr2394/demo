@@ -20,6 +20,16 @@ angular.module('demoApp')
 				templateUrl : 'guest/view/contact.html',
 				controller : 'contactCtrl'
 			})
+			.state('postHolders',{
+				url : '/PostHolders',
+				templateUrl : 'guest/view/PostHolders.html',
+				controller : 'postHoldersCtrl'
+			})
+			.state('register',{
+				url : '/register',
+				templateUrl : 'guest/view/register.html',
+				controller : 'registerCtrl'
+			})
 
 			$urlRouterProvider.otherwise('/welcome');
 
