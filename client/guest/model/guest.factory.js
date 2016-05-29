@@ -43,15 +43,15 @@ angular.module('demoApp')
 		}
 
 		obj.getStudent = function(){
-			$http.get("http://132.140.160.119/demo/server/select.php")
+			$http.get("http://132.140.160.119/demo/server/select.php?id")
 			.then(res,err);
 			return defer.promise;
 		}
 
-		obj.getAllStudent = function(){
-			$http.get("http://132.140.160.119/demo/server/select.php?id")
+		obj.getAllStudents = function(){
+			$http.get("http://132.140.160.119/demo/server/select.php")
 			.then(res,err);
-			return defer.promice;
+			return defer.promise;
 		}
 		return obj;
 	}]);
