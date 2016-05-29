@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<div class="row">
 
-		<div class="jumbotron">
+		<div class="well w3-white">
 			<h2>Student Details</h2>
 		</div>
 
@@ -16,8 +16,10 @@
 				</thead>
 
 				<tbody>
-					<tr>
-
+					<tr ng-repeat='x in students'>
+						<td>{{x.name}}</td>
+						<td>{{x.course}}</td>
+						<td>{{x.gender}}</td>
 					</tr>
 				</tbody>
 			</table>

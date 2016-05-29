@@ -30,6 +30,13 @@ angular.module('demoApp')
 				templateUrl : 'guest/view/register.html',
 				controller : 'registerCtrl'
 			})
+			.state('getAllStudents',{
+				url : '/getstudents',
+				templateUrl : 'guest/view/getstudents.html',
+				controller : 'getAllStudentCtrl'
+			})
+
+
 
 			$urlRouterProvider.otherwise('/welcome');
 
