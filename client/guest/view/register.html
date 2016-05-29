@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<h2> Registration Form</h2>
 
-	<form  role="form" ng-init="x={}" ng-submit="doAddStudent(x)">
+	<form  role="form" id="myform" ng-init="x={}" ng-submit="doAddStudent(x)">
 		<div class="col-md-12">
 			<div class="row">
 				<div class="col-md-4 col-sm-4 no-padding">
@@ -55,6 +55,15 @@
 			<input class="form-control myFormElement" type="number"  id="phone" ng-model="x['phone']" placeholder="Enter your phone no.">
 			<div class="col-md-12 text-center">
 				<button class="btn btn-success" type="submit">Add Student</button>
+				 <input type="button" class="btn btn-success" value="Reset Form" onClick="this.form.reset()" />
+
 			</div>
 	</form>
+	
+	<script>
+		function reset()
+		{
+			document.getElementById("myform").reset()
+		}
+	</script>
 </div>

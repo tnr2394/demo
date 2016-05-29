@@ -1,0 +1,12 @@
+angular.module('demoApp')
+	.controller('deleteStudentCtrl',['$scope','$state','guestFactory',function($scope,$state,guestFactory){
+		$scope.doDeleteStudent=function(x){
+			guestFactory.deleteStudent(x)
+			.then(function(response){
+				console(response);
+			},function(err){
+				console.error("error");
+				console.error(err);
+			})
+		}
+	}])
