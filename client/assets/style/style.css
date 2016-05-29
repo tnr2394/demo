@@ -1,11 +1,20 @@
-html,body{
-    height: 100%
+html, body {
+  height: 100%;
 }
-.footer{
-	position: fixed;
-	left: 0;
-	right: 0;
-	bottom: 0;
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -12px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 12px; 
+}
+.site-footer {
+ 
 }
 
 .specialHover:hover > h5{
@@ -19,4 +28,32 @@ img{
     max-width: 300px;
     max-width: 300px
     
+}
+
+.no-margin{
+	margin: 0px;
+}
+.no-padding{
+	padding: 0px;
+}
+.myFormElement{
+	margin-top:10px;
+	margin-bottom: 10px;
+}
+.myBtn{
+	display: table-cell;
+	height: 50px;
+	color:#eee;
+	text-align: center;
+	width: 250px;
+	vertical-align: middle;
+	padding: 10 16;
+}
+.myBtn:hover{
+	color:#fff;
+}
+
+.bottom-border{
+	border-bottom-style: solid;
+	border-bottom-color: #eee;
 }

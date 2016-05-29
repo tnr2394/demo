@@ -1,26 +1,39 @@
 <div class="container-fluid">
 	<h2> Registration Form</h2>
 
-	<form  role="form" class="w3-blue" ng-init="x={}" ng-submit="doAddStudent(x)">
-		<div class="form-inline well" >
-			<input class="form-control" type="text"  id="frst" ng-model="x['fname']" placeholder="Enter first name">
-
-			<input class="form-control" type="text"  id="mid" ng-model="x['mname']" placeholder="Enter Middle name">
-
-			<input class="form-control" type="text"  id="lst" ng-model="x['lname']" placeholder="Enter last name">
+	<form  role="form" ng-init="x={}" ng-submit="doAddStudent(x)">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-4 col-sm-4 no-padding">
+					<input class="myFormElement form-control col-md-4" type="text"  id="frst" ng-model="x['fname']" placeholder="Enter first name">
+				</div>
+				<div class="col-md-4 col-sm-4 no-padding">
+					<input class="myFormElement form-control col-md-4 " type="text"  id="mid" ng-model="x['mname']" placeholder="Enter Middle name">
+				</div>
+				<div class="col-md-4 col-sm-4 no-padding">
+					<input class="myFormElement form-control col-md-4" type="text"  id="lst" ng-model="x['lname']" placeholder="Enter last name">
+				</div>
+			</div>
 		</div>
-			<select class="form-control"  ng-model="x['gender']">
+			<select class="form-control myFormElement"  ng-model="x['gender']">
+				<option disabled value=''> Gender </option>
 				<option value='male'> Male </option>
 				<option value='female'> Female </option>
 			</select>
 	
-			<input class="form-control" type="text"  id="uni" ng-model="x['university']" placeholder="Enter your university">
+			<input class="form-control myFormElement" type="text"  id="uni" ng-model="x['university']" placeholder="Enter your university">
 	
-			<input class="form-control" type="text"  id="clg" ng-model="x['college']" placeholder="Enter your college">
+			<input class="form-control myFormElement" type="text"  id="clg" ng-model="x['college']" placeholder="Enter your college">
 	
+<<<<<<< HEAD
 			<select class="form-control" ng-model="x['course']">
 				
 				<option value='bba' selected> B.B.A. </option>
+=======
+			<select class="form-control myFormElement" ng-model="x['course']">
+				<option disabled value=''>Course</option>
+				<option value='bba'> B.B.A. </option>
+>>>>>>> 26a60b275f80fbc320c9b47c59b2c47d27505f8f
 				<option value='bsc'> B.SC </option>
 				<option value='bcom'> B.Com. </option>
 				<option value='msc'> M.SC. </option>
@@ -28,7 +41,8 @@
 				<option value='bca'> B.C.A. </option>
 			</select>
 
-			<select class="form-control" ng-model="x['semester']">
+			<select class="form-control myFormElement" ng-model="x['semester']">
+				<option disabled value=''>Semester</option>
 				<option> 1 </option>
 				<option> 2 </option>
 				<option> 3 </option>
@@ -37,14 +51,15 @@
 				<option> 6 </option>
 			</select>
 
-			<input class="form-control" type="text"  id="city" ng-model="x['city']" placeholder="Enter your city">
+			<input class="form-control myFormElement" type="text"  id="city" ng-model="x['city']" placeholder="Enter your city">
 	
-			<input class="form-control" type="text"  id="dist" ng-model="x['district']" placeholder="Enter your district">
+			<input class="form-control myFormElement" type="text"  id="dist" ng-model="x['district']" placeholder="Enter your district">
 
-			<input class="form-control" type="email"  id="email" ng-model="x['email']" placeholder="Enter your E-mail id">
+			<input class="form-control myFormElement" type="email"  id="email" ng-model="x['email']" placeholder="Enter your E-mail id">
 
-			<input class="form-control" type="number"  id="phone" ng-model="x['phone']" placeholder="Enter your phone no.">
-
-		<button class="btn btn-success" type="submit">Add Student</button>
+			<input class="form-control myFormElement" type="number"  id="phone" ng-model="x['phone']" placeholder="Enter your phone no.">
+			<div class="col-md-12 text-center">
+				<button class="btn btn-success" type="submit">Add Student</button>
+			</div>
 	</form>
 </div>
