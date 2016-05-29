@@ -26,30 +26,30 @@ angular.module('demoApp')
 			return defer.promise;
 		}
 		obj.addStudent = function(x){
-			$http.post("http://132.140.160.119/demo/client/insert.php",x)
+			$http.post("http://132.140.160.119/demo/server/insert.php",x)
 			.then(res,err);
-			return defer.promice;
+			return defer.promise;
 		}
-		obj.updateStudent = function(){
-			$http.post("http://132.140.160.119/demo/client/update.php")
+		obj.updateStudent = function(x){
+			$http.post("http://132.140.160.119/demo/server/update.php",x)
 			.then(res,err);
-			return defer.promice;
+			return defer.promise;
 		}
 
 		obj.deleteStudent = function(){
-			$http.post("http://132.140.160.119/demo/client/delete.php")
+			$http.post("http://132.140.160.119/demo/server/delete.php")
 			.then(res,err);
-			return defer.promice;
+			return defer.promise;
 		}
 
 		obj.getStudent = function(){
-			$http.post("http://132.140.160.119/demo/client/select.php")
+			$http.get("http://132.140.160.119/demo/server/select.php")
 			.then(res,err);
-			return defer.promice;
+			return defer.promise;
 		}
 
 		obj.getAllStudent = function(){
-			$http.post("http://132.140.160.119/demo/client/select.php")
+			$http.get("http://132.140.160.119/demo/server/select.php?id")
 			.then(res,err);
 			return defer.promice;
 		}
