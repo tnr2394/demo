@@ -66,3 +66,7 @@ th, td {
 .table-hover tbody tr:hover td {
         background-color: #b8b894;
 }
+
+.addShadow{
+	box-shadow: 1mm 1mm 5px black;
+}

@@ -16,7 +16,7 @@
 				</thead>
 
 				<tbody>
-					<tr ng-repeat='x in students'>
+					<tr ng-repeat='x in students' ng-click="stateChange(x)" >
 						<td>{{x.name}} </td>
 						<td>{{x.course}} </td>
 						<td>{{x.gender}} </td>

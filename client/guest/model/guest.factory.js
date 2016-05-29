@@ -37,13 +37,13 @@ angular.module('demoApp')
 		}
 
 		obj.deleteStudent = function(){
-			$http.post("http://132.140.160.119/demo/server/delete.php")
+			$http.post("http://132.140.160.119/demo/server/delete.php?id")
 			.then(res,err);
 			return defer.promise;
 		}
 
-		obj.getStudent = function(){
-			$http.get("http://132.140.160.119/demo/server/select.php?id")
+		obj.getStudent = function(x){
+			$http.get("http://132.140.160.119/demo/server/select_single.php?id="+x)
 			.then(res,err);
 			return defer.promise;
 		}

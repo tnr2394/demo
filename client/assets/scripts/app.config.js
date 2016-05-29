@@ -35,6 +35,11 @@ angular.module('demoApp')
 				templateUrl : 'guest/view/getstudents.html',
 				controller : 'getAllStudentCtrl'
 			})
+			.state('studentInfo',{
+				url : '/getstdents/:id',
+				templateUrl : 'guest/view/info.html',
+				controller : 'getStudentCtrl'
+			})
 
 
 
