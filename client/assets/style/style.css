@@ -58,11 +58,17 @@ img{
 	border-bottom-color: #eee;
 }
 
-th, td {
+.table {
     
     text-align: center;
 }
  
 .table-hover tbody tr:hover td {
         background-color: #b8b894;
+}
+
+.left_column{
+	font-weight: bold;
+	text-decoration: underline;
+	color: #fa8;
 }
