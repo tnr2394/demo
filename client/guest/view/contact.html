@@ -3,10 +3,18 @@
 		<h1> Contact Us </h1>
 	</div>
 	<div class="col-md-9">
-		<ul>Phone Numbers : 
+		<ul >Phone Numbers : 
 			<li>9016310001</li>
 			<li>9016310001</li>
 			<li>9016310001</li>
+
+		</ul>
+		<ul>
+			<li ng-repeat='student in students'>
+				<h3>{{student.name}}</h3>
+				<h3>{{student.gender}}</h3>
+				<h3>{{student.course}}</h3>
+			</li>
 		</ul>
 	</div>
 </div>

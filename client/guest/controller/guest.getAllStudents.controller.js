@@ -1,6 +1,7 @@
 angular.module('demoApp')
 	.controller('getAllStudentCtrl',['$scope','$state','guestFactory',function($scope,$state,guestFactory){
-		avtivate();
+		activate();
+		
 		function activate(){
 			guestFactory.getAllStudent()
 			.then(function(response){
