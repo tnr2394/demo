@@ -1,0 +1,17 @@
+{
+  "name": "demo",
+  "homepage": "https://github.com/tnr2394/demo",
+  "authors": [
+    "Mohit Shah <shahmohitm@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
