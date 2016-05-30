@@ -4,6 +4,8 @@ angular.module('demoApp')
 			$state.go('studentInfo',{id : x.id});
 			
 		};
+		
+
 		activate();
 
 		function activate(){
@@ -14,14 +16,6 @@ angular.module('demoApp')
 				console(error);
 			});
 
-			$scope.deleteEvent = function(x){
-				guestFactory.deleteEvent(x)
-					.then(function(response){
-						activate();
-					},function (err) {
-						 alert("student could not be deleted"); 
-					}) 
-			}
-
+			
 			}
 	}]);

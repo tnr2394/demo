@@ -4,27 +4,27 @@
 		<h2>Student Details</h2>
 	</div>
 
-	<form class="form-control" role="form">
+	<form class="form-control" ng-submit="doUpdate(student)">
 		<div class="row">
 			<div class="col-md-12">
-			
+
 				<label class="">Name :</label>
-				<input type="text" class="form-control" id="nm">
+				<input ng-model="student.name" type="text" class="form-control" id="nm">
 
 				<label class="">Gender :</label>
-				<select class="form-control">
+				<select ng-model="student.gender" class="form-control">
 					<option value='male'> Male </option>
 					<option value='female'> Female </option>
 				</select>
 					
 				<label class=" ">University :</label>
-				<input type="text" class="form-control" id="uni">
+				<input ng-model="student.university" type="text" class="form-control" id="uni">
 
 				<label class="">College :</label>
-				<input type="text" class="form-control" id="clg">
+				<input ng-model="student.college" type="text" class="form-control" id="clg">
 
 				<label class="">Course :</label>
-				<select class="form-control">
+				<select ng-model="student.course" class="form-control">
 					<option value='bba'>B.B.A.</option>
 					<option value='bsc'>B.SC.</option>
 					<option value='bcom'>B.Com.</option>
@@ -34,28 +34,28 @@
 				</select>
 
 				<label class="">Semester :</label>
-				<select class="form-control">
-					<option> 1 </option>
-					<option> 2 </option>
-					<option> 3 </option>
-					<option> 4 </option>
-					<option> 5 </option>
-					<option> 6 </option>
+				<select ng-model="student.semester" class="form-control">
+					<option value="1"> 1 </option>
+					<option value="2"> 2 </option>
+					<option value="3"> 3 </option>
+					<option value="4"> 4 </option>
+					<option value="5"> 5 </option>
+					<option value="6"> 6 </option>
 				</select>
 
 				<label class="">City :</label>
-				<input type="text" class="form-control" id="city">
+				<input ng-model="student.city" type="text" class="form-control" id="city">
 
 				<label class="">District :</label>
-				<input type="text" class="form-control" id="dist">
+				<input ng-model="student.district" type="text" class="form-control" id="dist">
 
 				<label class="">E-mail :</label>
-				<input type="email" class="form-control" id="email">
+				<input ng-model="student.email" type="email" class="form-control" id="email">
 
 				<label class="">Phone no :</label>
-				<input type="number" class="form-control" id="phone">
+				<input ng-model="student.phone" type="number" class="form-control" id="phone">
 
-				<button type="button" class="btn btn-success">Update</button>
+				<button type="submit" class="btn btn-success">Update</button>
 
 			</div>
 		</div>

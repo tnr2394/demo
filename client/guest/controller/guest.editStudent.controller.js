@@ -1,12 +1,13 @@
 angular.module('demoApp')
 	.controller('editStudentCtrl',['$scope','$state','$stateParams','guestFactory',function($scope,$state,$stateParams,guestFactory){
-			$scope.student= $stateParams.student;
-			console.log($scope.student);
+
+		var id= $stateParams.student;
 		activate();
 		function activate(){
-			guestFactory.getStudent($scope.id)
+			guestFactory.getStudent(id)
 			.then(function(response){
 				$scope.student=response.data;
+				$scope.student['phone'] = parseInt($scope.student['phone']);
 
 			},function(err){
 				alert("something has gone wrong");
@@ -14,4 +15,14 @@ angular.module('demoApp')
 			});
 		}
 
+		$scope.doUpdate = function(x){
+			guestFactory.updateStudent(x)
+			.then(function(res){
+				alert('done')
+				console.log(res.data);
+			},
+			function(e){
+				console.error(e);
+			});
+		}
 	}])

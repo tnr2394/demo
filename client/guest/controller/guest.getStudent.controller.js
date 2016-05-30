@@ -4,9 +4,9 @@ angular.module('demoApp')
 
 		$scope.stateChange=function(x){
 			console.log(x);
-			$state.go('editstudent',{student : x});
+			$state.go('editstudent',{student : x.id});
 		};
-		
+				
 		activate($stateParams.id);
 		function activate(x){
 			$scope.student=null;
@@ -18,5 +18,15 @@ angular.module('demoApp')
 				alert("There seems to be some error. Please try again later.");
 				console.error(err);
 			})
+			
+			$scope.deleteStudent = function(x){
+				guestFactory.deleteStudent(x)
+					.then(function(response){
+						$state.go('getAllStudents');
+					},function (err) {
+						 alert("student could not be deleted"); 
+					}) 
+			}
+
 		}
 	});

@@ -36,11 +36,6 @@ angular.module('demoApp')
 			return defer.promise;
 		}
 
-		obj.deleteStudent = function(){
-			$http.post("http://132.140.160.119/demo/server/delete.php?id")
-			.then(res,err);
-			return defer.promise;
-		}
 
 		obj.getStudent = function(x){
 			$http.get("http://132.140.160.119/demo/server/select_single.php?id="+x)
@@ -59,8 +54,8 @@ angular.module('demoApp')
 			.then(res,err);
 			return defer.promise;
 		}
-		obj.deleteStudent = function(){
-			$http.get("http://132.140.160.119/demo/server/select_single.php?id="+x)
+		obj.deleteStudent = function(x){
+			$http.post("http://132.140.160.119/demo/server/delete.php?id="+x)
 			.then(res,err);
 			return defer.promise;
 		}
