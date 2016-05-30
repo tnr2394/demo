@@ -5,55 +5,63 @@
 			<h2 class="text-primary well addShadow page-header">{{student.name}}</h2>
 		</div>
 
-		<div class="col-md-8 col-md-offset-2	">
-			<table class="table table-bordered table-responsive w3-xlarge w3-khakhi w3-card-4" >
+		<div class="col-md-8 col-md-offset-2">
+			<table class="table table-bordered table-responsive w3-xlarge w3-sand w3-card-4" >
 				
 			
 				<tr>
-					<td class="left_column "> Gender </td>
+					<td class="left_column w3-text-blue"> Gender </td>
 					<td>{{student.gender}}</td>
 				</tr>
 
 				<tr>
-					<td class="left_column "> University </td>
+					<td class="left_column w3-text-blue"> University </td>
 					<td>{{student.university}}</td>
 				</tr>
 
 				<tr>
-					<td class="left_column "> College </td>
+					<td class="left_column w3-text-blue"> College </td>
 					<td>{{student.college}}</td>
 				</tr>
 
 				<tr>
-					<td class="left_column "> Course </td>
+					<td class="left_column w3-text-blue"> Course </td>
 					<td>{{student.course}}</td>
 				</tr>
 
 				<tr>
-					<td class="left_column "> Semester </td>
+					<td class="left_column w3-text-blue"> Semester </td>
 					<td>{{student.semester}}</td>
 				</tr>
 
 				<tr>
-					<td class="left_column "> City </td>
+					<td class="left_column w3-text-blue"> City </td>
 					<td>{{student.city}}</td>	
 				</tr>
 
 				<tr>
-					<td class="left_column "> District </td>
+					<td class="left_column w3-text-blue"> District </td>
 					<td>{{student.district}}</td>
 				</tr>
 
 				<tr>
-					<td class="left_column "> E-mail</td>
+					<td class="left_column w3-text-blue"> E-mail</td>
 					<td>{{student.email}}</td>
 				</tr>
 
 				<tr>
-					<td class="left_column "> Phone no. </td>
+					<td class="left_column w3-text-blue"> Phone no. </td>
 					<td>{{student.phone}}</td>
 				</tr>
+
 			</table>
+			
 		</div>
+
 	</div>
+	<div>
+			 <button type="button" class="btn btn-success" ng-click="editStudent(x.id)">Edit</button>
+			<button type="button" class="btn btn-danger" ng-click="deleteStudent(x.id)">delete</button>
+	
+			</div>
 </div>

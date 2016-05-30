@@ -13,5 +13,15 @@ angular.module('demoApp')
 			},function(error){
 				console(error);
 			});
+
+			$scope.deleteEvent = function(x){
+				guestFactory.deleteEvent(x)
+					.then(function(response){
+						activate();
+					},function (err) {
+						 alert("student could not be deleted"); 
+					}) 
+			}
+
 			}
 	}]);

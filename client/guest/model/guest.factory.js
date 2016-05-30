@@ -53,5 +53,16 @@ angular.module('demoApp')
 			.then(res,err);
 			return defer.promise;
 		}
+
+		obj.editStudent = function(){
+			$http.get("http://132.140.160.119/demo/server/select_single.php?id="+x)
+			.then(res,err);
+			return defer.promise;
+		}
+		obj.deleteStudent = function(){
+			$http.get("http://132.140.160.119/demo/server/select_single.php?id="+x)
+			.then(res,err);
+			return defer.promise;
+		}
 		return obj;
 	}]);

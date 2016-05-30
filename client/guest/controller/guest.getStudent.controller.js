@@ -7,7 +7,7 @@ angular.module('demoApp')
 			$scope.student=null;
 			guestFactory.getStudent(x).then(function(response){
 				$scope.student = response.data;
-				alert("STUDENT LOADED");
+				
 				console.log($scope.student);
 			},function(err){
 				alert("There seems to be some error. Please try again later.");

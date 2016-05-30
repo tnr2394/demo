@@ -40,6 +40,11 @@ angular.module('demoApp')
 				templateUrl : 'guest/view/info.html',
 				controller : 'getStudentCtrl'
 			})
+			.state('editStudent',{
+				url : '/editStudent/:id',
+				templateUrl : 'guest/view/editStudent.html',
+				controller : 'editStudentCtrl'
+			})
 
 
 
