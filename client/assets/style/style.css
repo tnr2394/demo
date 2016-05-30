@@ -10,11 +10,13 @@ html, body {
   content: "";
   display: block;
 }
-.site-footer, .page-wrap:after {
-  height: 12px; 
-}
-.site-footer {
  
+
+.myFooter{
+
+	position: fixed;
+	bottom: 0;
+	
 }
 
 .specialHover:hover > h5{
