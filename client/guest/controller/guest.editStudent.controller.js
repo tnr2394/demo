@@ -18,7 +18,6 @@ angular.module('demoApp')
 		$scope.doUpdate = function(x){
 			guestFactory.updateStudent(x)
 			.then(function(res){
-				alert('done')
 				console.log(res.data);
 			},
 			function(e){

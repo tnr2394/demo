@@ -5,33 +5,13 @@ angular.module('demoApp')
 		var defer = $q.defer();
 		var res = function(response){defer.resolve(response);}
 		var err = function(error){defer.reject(error);}
-
-		obj.getAllEvents = function(){
-
-			$http.get("http://www.vvprotaract.club/server/guest/get_events.php")
-			.then(res,err);
-			return defer.promise;
-		}
-		obj.getAllPostHolders = function(){
-
-			$http.get("http://www.vvprotaract.club/server/guest/get_postholders.php")
-			.then(res,err);
-			return defer.promise;
-		}
-			
-		obj.getAllTestimonials = function(){
-
-			$http.get("http://www.vvprotaract.club/server/guest/get_events.php")
-			.then(res,err);
-			return defer.promise;
-		}
 		obj.addStudent = function(x){
 			$http.post("http://132.140.160.119/demo/server/insert.php",x)
 			.then(res,err);
 			return defer.promise;
 		}
 		obj.updateStudent = function(x){
-			$http.post("http://132.140.160.119/demo/server/update.php",x)
+			$http.post("http://132.140.160.119/demo/server/update.php?id="+x.id,x)
 			.then(res,err);
 			return defer.promise;
 		}
