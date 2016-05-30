@@ -1,6 +1,7 @@
 angular.module('demoApp')
 	.controller('editStudentCtrl',['$scope','$state','$stateParams','guestFactory',function($scope,$state,$stateParams,guestFactory){
-			$scope.id= $stateParams.id;
+			$scope.student= $stateParams.student;
+			console.log($scope.student);
 		activate();
 		function activate(){
 			guestFactory.getStudent($scope.id)
