@@ -1,31 +1,34 @@
-<div class="container-fluid">
+<div class="myFormElement container-fluid">
 
-	<div class="well w3-sand">
+	<div class="myFormElement well w3-sand">
 		<h2>Update Details</h2>
 	</div>
 
-	<form role="form">
-		<div class="col-md-12">
-							
-			
-				<label class="myFormElement">Name :</label>
-				<input type="text" class="form-control" id="nm">
-			
 
-				<label class="myFormElement">Gender :</label>
-				<select class="form-control">
+	<form  ng-submit="doUpdate(student)">
+		<div class="myFormElement row">
+			<div class="col-md-12">
+
+				<label class="myFormElement ">Name :</label>
+				<input ng-model="student.name" type="text" class="myFormElement form-control" id="nm">
+
+				<label class="myFormElement ">Gender :</label>
+				<select ng-model="student.gender" class="myFormElement form-control">
+
 					<option value='male'> Male </option>
 					<option value='female'> Female </option>
 				</select>
 					
-				<label class="myFormElement ">University :</label>
-				<input type="text" class="form-control" id="uni">
 
-				<label class="myFormElement">College :</label>
-				<input type="text" class="form-control" id="clg">
+				<label class="myFormElement  ">University :</label>
+				<input ng-model="student.university" type="text" class="myFormElement form-control" id="uni">
 
-				<label class="myFormElement">Course :</label>
-				<select class="form-control">
+				<label class="myFormElement ">College :</label>
+				<input ng-model="student.college" type="text" class="myFormElement form-control" id="clg">
+
+				<label class="myFormElement ">Course :</label>
+				<select ng-model="student.course" class="myFormElement form-control">
+
 					<option value='bba'>B.B.A.</option>
 					<option value='bsc'>B.SC.</option>
 					<option value='bcom'>B.Com.</option>
@@ -34,34 +37,29 @@
 					<option value='bca'>B.C.A.</option>
 				</select>
 
-				<label class="myFormElement">Semester :</label>
-				<select class="form-control">
-					<option> 1 </option>
-					<option> 2 </option>
-					<option> 3 </option>
-					<option> 4 </option>
-					<option> 5 </option>
-					<option> 6 </option>
+				<label class="myFormElement ">Semester :</label>
+				<select ng-model="student.semester" class="myFormElement form-control">
+					<option value="1"> 1 </option>
+					<option value="2"> 2 </option>
+					<option value="3"> 3 </option>
+					<option value="4"> 4 </option>
+					<option value="5"> 5 </option>
+					<option value="6"> 6 </option>
 				</select>
 
-				<label class="myFormElement">City :</label>
-				<input type="text" class="form-control" id="city">
+				<label class="myFormElement ">City :</label>
+				<input ng-model="student.city" type="text" class="myFormElement form-control" id="city">
 
-				<label class="myFormElement">District :</label>
-				<input type="text" class="form-control" id="dist">
+				<label class="myFormElement ">District :</label>
+				<input ng-model="student.district" type="text" class="myFormElement form-control" id="dist">
 
-				<label class="myFormElement">E-mail :</label>
-				<input type="email" class="form-control" id="email">
+				<label class="myFormElement ">E-mail :</label>
+				<input ng-model="student.email" type="email" class="myFormElement form-control" id="email">
 
-				<label class="myFormElement">Phone no :</label>
-				<input type="number" class="form-control" id="phone">
-
+				<label class="myFormElement ">Phone no :</label>
+				<input ng-model="student.phone" type="number" class="myFormElement form-control" id="phone">
+				<div class="col-md-12 text-center">
+				<button type="submit" class="myFormElement btn btn-success">Update</button>
 				</div>
-
-				<div class="col-md-12 text-center myFormElement">
-				<button type="button" class="btn btn-success">Update</button>
-				</div>
-			
-
 	</form>
 </div>
